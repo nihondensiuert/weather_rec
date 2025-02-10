@@ -1,0 +1,150 @@
+/* ベースのスタイルを追加 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.page-container {
+  padding: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  max-width: 480px; /* モバイルでの最大幅 */
+  margin-bottom: 4rem; /* ナビゲーションバーの高さ分 */
+  overflow-x: hidden;
+}
+
+.counter-button {
+  padding: 0.6em 1.2em;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.counter-button:hover {
+  background-color: #747bff;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #646cff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.25s;
+}
+
+.nav-link:hover {
+  background-color: #f0f0f0;
+}
+
+.navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: white;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+.navigation .nav-link {
+  margin: 0 1rem;
+}
+
+/* タブレット以上の画面サイズ */
+@media (min-width: 768px) {
+  .content {
+    max-width: 720px;
+  }
+
+  .navigation {
+    position: static;
+    max-width: 720px;
+    margin: 1rem auto;
+    border-radius: 8px;
+  }
+}
+
+/* デスクトップサイズ */
+@media (min-width: 1024px) {
+  .content {
+    max-width: 960px;
+  }
+
+  .navigation {
+    max-width: 960px;
+  }
+}

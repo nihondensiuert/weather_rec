@@ -1,0 +1,119 @@
+.weather-section {
+  margin: 2rem 0;
+}
+
+.weather-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.weather-chart {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+}
+
+.welcome-section {
+  text-align: left;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 480px;
+}
+
+.feature-list {
+  text-align: left;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.feature-list li {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.navigation-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 480px;
+}
+
+.navigation-section .nav-link {
+  width: 100%;
+  padding: 1rem;
+  background-color: #646cff;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: background-color 0.25s;
+}
+
+.navigation-section .nav-link:hover {
+  background-color: #747bff;
+}
+
+.counter-section {
+  margin: 1.5rem auto;
+  width: 100%;
+  max-width: 480px;
+}
+
+.counter-button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.counter-button:hover {
+  background-color: #45a049;
+}
+
+/* タブレット以上の画面サイズ */
+@media (min-width: 768px) {
+  .welcome-section,
+  .navigation-section,
+  .counter-section {
+    max-width: 720px;
+  }
+
+  .navigation-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .counter-button {
+    width: auto;
+    min-width: 200px;
+  }
+}
+
+/* デスクトップサイズ */
+@media (min-width: 1024px) {
+  .welcome-section,
+  .navigation-section,
+  .counter-section {
+    max-width: 960px;
+  }
+} 
